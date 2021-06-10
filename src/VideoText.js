@@ -1,6 +1,6 @@
 // VideoText
 
-function VideoText({title, color, deleteVideo}) {
+function VideoText({title, color, author, deleteVideo}) {
     return(
         <div style={{ display: 'flex' }}>
             <div style={{ padding: '30px', background: color }}>
@@ -9,7 +9,7 @@ function VideoText({title, color, deleteVideo}) {
             <div>
                 <h1>{title}</h1>
                 <h4>3m - 6 novembre</h4>
-                <h3>Vivaldi</h3>
+                <h3>{author}</h3>
                 <button onClick={deleteVideo} >Cancella Video</button>
             </div>
         </div>
