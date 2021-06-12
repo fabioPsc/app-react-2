@@ -3,6 +3,7 @@ import {useState} from 'react';
 import VideoText from './VideoText';
 import { v4 as uuidv4 } from 'uuid';
 import style from './style/videoText.module.css';
+import paragraph from './style/app.module.css';
 
 function App(){
   const [title, setTitle] = useState("");
@@ -39,20 +40,20 @@ function App(){
 
   }
 
-  const myStyle = { color: 'red', paddingLeft: 100 }
+  /* const myStyle = { color: 'red', paddingLeft: 100 } */
   
   return (
     <div className="App">
     {/* stile inline */}
-    <h1 style={ {paddingLeft: 50, color: 'blue', backgroundColor: 'red'} } >Video YouTube stile inline</h1>
+    <h1 className={ paragraph.title } >Video YouTube</h1>
     {/* costante, togliere un paio di {} */}
-    <h1 style={ myStyle } >Video YouTube - Costante</h1>
-    <h3>Scrivi il Titolo</h3>
-    <input type="text" onChange={handleTitle} value={title} />
+    {/* <h1>Video YouTube</h1> */}
+    <h3 className={ paragraph }>Scrivi il Titolo</h3>
+    <input className={ paragraph.input }  type="text" onChange={handleTitle} value={title} />
     <h3>Scrivi il Colore</h3>
-    <input type="text" onChange={HandleColor} value={color} />
+    <input className={ paragraph.input }  type="text" onChange={HandleColor} value={color} />
     <h3>Chi è l'autore?</h3>
-    <input type="text" onChange={HandleAuthor} value={author} />
+    <input className={ paragraph.input } type="text" onChange={HandleAuthor} value={author} />
     <button onClick={createVideoHandler}>Crea Nuovo Video</button>
     {videoList.map(function(video){
       return <VideoText deleteVideo={() => deleteVideo(video.id)} key={video.id} title={video.title} color={video.color} author={video.author}/>

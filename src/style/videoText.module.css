@@ -1,1 +1,10 @@
-/* FOGLIO DI STILE */
+/* FOGLIO DI STILE DEL VIDEOTEXT*/
+
+.title {
+    color:blueviolet;
+    margin-left: 40px;
+}
+
+.image {
+    margin-left: 90px;
+}
