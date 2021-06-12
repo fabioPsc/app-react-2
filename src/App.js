@@ -40,6 +40,13 @@ function App(){
 
   }
 
+  /* MODI PER INSERIRE LO STILE */
+  // 1. inline
+  // 2. File css tramite id e className
+  // 3. CSS module
+  // 4. CSS in JS (diverse librerie da utilizzare => Styled Components)
+  // 5. SASS
+
   /* const myStyle = { color: 'red', paddingLeft: 100 } */
   
   return (

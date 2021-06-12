@@ -7,7 +7,7 @@
 }
 
 .image {
-    margin-left: 90px;
+    margin-left: 190px;
 }
 
 
@@ -20,3 +20,7 @@
     margin-left: 20px;
 }
 
+.titleUno {
+    color:blue;
+    margin-left: 15px;
+}
