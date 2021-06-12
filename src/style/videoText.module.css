@@ -21,6 +21,8 @@
 }
 
 .titleUno {
-    color:blue;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:rgb(241, 241, 241);
     margin-left: 15px;
+    text-shadow: 3px 3px 3px black;
 }

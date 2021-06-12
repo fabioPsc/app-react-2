@@ -1,9 +1,10 @@
 // VideoText
 import style from './style/videoText.module.css';
+import './style/myStyle.scss';
 
 function VideoText({title, color, author, deleteVideo}) {
     return(
-        <div style={{ display: 'flex', marginTop: 35 }}>
+        <div id="container" style={{ display: 'flex', marginTop: 35 }}>
             <div style={{ padding: '30px', background: color }}>
                 <h1 className={ style.image } ></h1>
             </div>
