@@ -3,8 +3,20 @@
 .title {
     color:blueviolet;
     margin-left: 40px;
+    text-shadow: 2px 2px 3px black;
 }
 
 .image {
     margin-left: 90px;
 }
+
+
+.author {
+    color:brown;
+}
+
+.visual {
+    color:gray;
+    margin-left: 20px;
+}
+

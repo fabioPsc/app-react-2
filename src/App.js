@@ -49,12 +49,12 @@ function App(){
     {/* costante, togliere un paio di {} */}
     {/* <h1>Video YouTube</h1> */}
     <h3 className={ paragraph }>Scrivi il Titolo</h3>
-    <input className={ paragraph.input }  type="text" onChange={handleTitle} value={title} />
+    <input className={ paragraph.input }  type="text" placeholder="Inserire il Titolo del Libro" onChange={handleTitle} value={title} />
     <h3>Scrivi il Colore</h3>
-    <input className={ paragraph.input }  type="text" onChange={HandleColor} value={color} />
+    <input className={ paragraph.input }  type="text" placeholder="Scrivere il colore in Inglese" onChange={HandleColor} value={color} />
     <h3>Chi è l'autore?</h3>
-    <input className={ paragraph.input } type="text" onChange={HandleAuthor} value={author} />
-    <button onClick={createVideoHandler}>Crea Nuovo Video</button>
+    <input className={ paragraph.input } type="text" placeholder="Nome dell'Autore" onChange={HandleAuthor} value={author} />
+    <button className={ paragraph.button } onClick={createVideoHandler}>Crea Nuovo Video</button>
     {videoList.map(function(video){
       return <VideoText deleteVideo={() => deleteVideo(video.id)} key={video.id} title={video.title} color={video.color} author={video.author}/>
     })}
