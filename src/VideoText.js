@@ -1,7 +1,7 @@
 // VideoText
 import style from './style/videoText.module.css';
 import './style/myStyle.scss';
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 
 function VideoText({title, color, author, deleteVideo}) {
     return(
