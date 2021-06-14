@@ -1,5 +1,5 @@
 
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import VideoText from './VideoText';
 import { v4 as uuidv4 } from 'uuid';
 import style from './style/videoText.module.css';
@@ -7,6 +7,9 @@ import paragraph from './style/app.module.css';
 import './style/myStyle.scss';
 
 function App(){
+
+
+
   const [title, setTitle] = useState("");
   const [color, setColor] = useState("");
   const [author, setAuthor] = useState("");
@@ -15,6 +18,11 @@ function App(){
   const handleTitle = (e) => {
     setTitle(e.target.value)
   }
+
+  useEffect(() => {
+    console.log('Sto usando useEffect da App')
+  }, [title])
+
   const HandleColor = (e) => {
     setColor(e.target.value)
   }

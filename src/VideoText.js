@@ -2,8 +2,14 @@
 import style from './style/videoText.module.css';
 import './style/myStyle.scss';
 import styled, {css} from 'styled-components';
+import {useEffect} from 'react';
 
 function VideoText({title, color, author, deleteVideo}) {
+
+    useEffect(() => {
+        console.log('Sto usando useEffect per stampare da VideoText')
+    }, [])
+
     return(
         <div id="container" style={{ display: 'flex', marginTop: 35 }}>
             <div style={{ padding: '30px', background: color }}>
@@ -14,7 +20,7 @@ function VideoText({title, color, author, deleteVideo}) {
                 <h1 className={ style.title }>"{title}"</h1>
                 <h4 className={ style.visual }> Visual e Data: 3m - 6 novembre 2021</h4>
                 <h3 className={ style.author }>Autore: {author}</h3>
-                <MyButton primary={false} onClick={ deleteVideo }>Cancella Video</MyButton>
+                <MyButton primary={true} onClick={ deleteVideo }>Cancella Video</MyButton>
             </div>
         </div>
     )
@@ -32,8 +38,8 @@ box-shadow: 3px 3px 3px black;
 
 ${props =>
     props.primary ? css `
-        color: grey;
-        border: 2px solid grey;
+        color: #2b6ec5;
+        border: 2px solid #2b6ec5;
     ` : null
 }
 `;
