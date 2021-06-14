@@ -14,7 +14,7 @@ function VideoText({title, color, author, deleteVideo}) {
                 <h1 className={ style.title }>"{title}"</h1>
                 <h4 className={ style.visual }> Visual e Data: 3m - 6 novembre 2021</h4>
                 <h3 className={ style.author }>Autore: {author}</h3>
-                <MyButton onClick={ deleteVideo }>Cancella Video</MyButton>
+                <MyButton primary={false} onClick={ deleteVideo }>Cancella Video</MyButton>
             </div>
         </div>
     )
@@ -29,8 +29,14 @@ color: palevioletred;
 margin: 0 1em;
 padding: 0.25em 1em;
 box-shadow: 3px 3px 3px black;
-`
 
+${props =>
+    props.primary ? css `
+        color: grey;
+        border: 2px solid grey;
+    ` : null
+}
+`;
 
 export default VideoText;
 
