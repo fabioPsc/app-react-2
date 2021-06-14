@@ -1,14 +1,20 @@
 /* Sintassi Sass */
 
-$primary-color: rgb(176, 212, 190);
+$primary-color: rgb(170, 218, 188);
+$secondary-color:rgb(246, 218, 157);
 
 /* definiamo un id come in CSS*/
 #container {
     background-color: $primary-color;
-    box-shadow: 2px 2px 2px rgb(187, 180, 180);
+    box-shadow: 5px 5px 5px rgb(92, 91, 91);
 
     div {
         padding: 50px;
     }
+}
+
+#media {
+    background-color: $secondary-color;
+    margin-left: 120px;
 }
 

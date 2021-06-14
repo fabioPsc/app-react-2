@@ -1,6 +1,7 @@
 // VideoText
 import style from './style/videoText.module.css';
 import './style/myStyle.scss';
+import styled from 'styled-components';
 
 function VideoText({title, color, author, deleteVideo}) {
     return(
@@ -10,14 +11,26 @@ function VideoText({title, color, author, deleteVideo}) {
             </div>
             <div>
                 <h1 className={ style.titleUno }>Titolo del Libro:</h1>
-                <h1 className={ style.title } >"{title}"</h1>
-                <h4 className={ style.visual } > Visual e Data: 3m - 6 novembre 2021</h4>
+                <h1 className={ style.title }>"{title}"</h1>
+                <h4 className={ style.visual }> Visual e Data: 3m - 6 novembre 2021</h4>
                 <h3 className={ style.author }>Autore: {author}</h3>
-                <button onClick={deleteVideo} >Cancella Video</button>
+                <MyButton onClick={ deleteVideo }>Cancella Video</MyButton>
             </div>
         </div>
     )
 }
+
+
+const MyButton =  styled.button `
+background: transparent;
+border-radius: 3px;
+border: 2px solid palevioletred;
+color: palevioletred;
+margin: 0 1em;
+padding: 0.25em 1em;
+box-shadow: 3px 3px 3px black;
+`
+
 
 export default VideoText;
 
